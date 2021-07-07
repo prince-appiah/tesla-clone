@@ -4,11 +4,12 @@ import "./index.css";
 import App from "./App";
 import { store } from "./app/store";
 import { Provider } from "react-redux";
-import { ThemeProvider } from "@material-ui/core";
+import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import { customTheme } from "./customStyles";
 
 ReactDOM.render(
   <ThemeProvider theme={customTheme}>
+    <CssBaseline />
     <Provider store={store}>
       <App />
     </Provider>

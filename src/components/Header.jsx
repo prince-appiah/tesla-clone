@@ -1,9 +1,13 @@
-import { Box, Container, makeStyles, Typography } from "@material-ui/core";
-import { grey } from "@material-ui/core/colors";
+import { Box, makeStyles, Typography } from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
+import { useState } from "react";
 import logo from "../assets/tesla-logo.svg";
+import { RightNav } from "./RightNav";
 
 export const Header = () => {
+  const [burgerOpen, setBurgerOpen] = useState(false);
   const classes = useStyles();
+
   return (
     <Box className={classes.root}>
       {/* Logo */}
@@ -23,10 +27,17 @@ export const Header = () => {
       </Box>
       {/* Trailing */}
       <Box className={classes.trailing}>
-        <h5>Shop</h5>
-        <h5>Account</h5>
-        <h5>Menu</h5>
+        <Typography component="a">Shop</Typography>
+        <Typography component="a">Account</Typography>
+        <MenuIcon
+          className={classes.menuIcon}
+          onClick={() => setBurgerOpen(true)}
+        />
       </Box>
+      <RightNav
+        status={burgerOpen}
+        onBurgerClicked={() => setBurgerOpen(false)}
+      />
     </Box>
   );
 };
@@ -36,17 +47,20 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: theme.zIndex.drawer,
+    minHeight: "60px",
+    padding: "0 20px",
   },
-  logo: {
-    width: "90px",
-  },
+  logo: { width: "120px" },
   menuLinks: {
     display: "flex",
     "& h5": {
-      //   paddingLeft: theme.spacing(1),
-      //   paddingRight: theme.spacing(1),
       color: theme.palette.text.primary,
-      padding: theme.spacing(1),
+      padding: "0 10px",
       marginRight: theme.spacing(1),
       borderRadius: "100px",
       fontWeight: theme.typography.fontWeightMedium,
@@ -58,5 +72,18 @@ const useStyles = makeStyles((theme) => ({
   },
   trailing: {
     display: "flex",
+    alignItems: "center",
+    "& a": {
+      fontWeight: theme.typography.fontWeightMedium,
+      padding: theme.spacing(2),
+    },
+    "& :hover": {
+      cursor: "pointer",
+    },
+  },
+  menuIcon: {
+    display: "flex",
+    alignItems: "center",
+    marginLeft: theme.spacing(4),
   },
 }));

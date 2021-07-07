@@ -1,29 +1,63 @@
-import { Typography } from "@material-ui/core";
+import { Box, makeStyles } from "@material-ui/core";
 import React from "react";
+import { Section } from "./Section";
 
 export const Home = () => {
+  const classes = useStyles();
+
   return (
-    <>
-      <Typography color="textPrimary">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore
-        consectetur delectus reiciendis temporibus dolor sequi unde corporis ex
-        alias neque! Modi fugit similique velit iste, id impedit nemo. Saepe,
-        non. Qui quod, fugiat nemo magni modi ad corrupti sequi sunt,
-        dignissimos enim officiis, maiores odit eligendi veritatis. Vero
-        officiis, reiciendis, quasi suscipit, error doloremque quaerat alias
-        modi fuga quas repellendus. Sint iusto tempore saepe accusamus
-        consequatur nostrum deserunt esse soluta officia. Recusandae iusto
-        officia fugiat porro odit accusamus et blanditiis iure esse officiis
-        enim dignissimos, possimus accusantium incidunt est mollitia! Libero,
-        non. Voluptatibus a rem quo dolorum, officia incidunt repellendus error
-        sequi, architecto temporibus est dolor laborum minima aut debitis atque,
-        asperiores placeat dignissimos itaque totam accusamus doloremque odio
-        aliquam. Pariatur eveniet tempora iusto voluptates obcaecati eum rem
-        ipsam, error doloremque ullam incidunt doloribus accusamus earum
-        praesentium! Quia reiciendis aliquid aspernatur. Pariatur, accusantium
-        magni! Sit, rerum? Dolorum veniam blanditiis illum!
-      </Typography>
-      <Typography color="textSecondary">This is secondary</Typography>
-    </>
+    <Box className={classes.root}>
+      <Section
+        title="Model S"
+        subtitle="Watch the Plaid Delivery Event Livestream"
+        bgImage="/images/bg1.jpeg"
+        leftBtnText="Custom Order"
+        rightBtnText="Existing Inventory"
+      />
+      <Section
+        title="Model Y"
+        subtitle="Order online for Touchless Delivery"
+        bgImage="/images/bg2.jpeg"
+        leftBtnText="Custom Order"
+        rightBtnText="Existing Inventory"
+      />
+      <Section
+        title="Model 3"
+        subtitle="Order online for Touchless Delivery"
+        bgImage="/images/bg3.jpeg"
+        leftBtnText="Custom Order"
+        rightBtnText="Existing Inventory"
+      />
+      <Section
+        title="Model X"
+        subtitle="Order online for Touchless Delivery"
+        bgImage="/images/bg4.jpeg"
+        leftBtnText="Custom Order"
+        rightBtnText="Existing Inventory"
+      />
+      <Section
+        title="Lower Cost Solar Panels in America"
+        subtitle="Money-back guarantee"
+        bgImage="/images/bg5.jpeg"
+        leftBtnText="Order Now"
+        rightBtnText="Learn More"
+      />
+      <Section
+        title="Solar for New Roofs"
+        subtitle="Solar Roof Costs Less Than a New Roof Plus Solar Panels"
+        bgImage="/images/bg6.jpeg"
+        leftBtnText="Order Now"
+        rightBtnText="Learn More"
+      />
+      <Section
+        title="Accessories"
+        // subtitle="Order online for Touchless Delivery"
+        bgImage="/images/bg7.jpeg"
+        leftBtnText="Shop Now"
+        // rightBtnText="Existing Inventory"
+      />
+    </Box>
   );
 };
+
+const useStyles = makeStyles(() => ({ root: {} }));

@@ -9,10 +9,10 @@ function App() {
 
   return (
     <Box className={classes.root}>
-      <Container>
-        <Header />
-        <Home />
-      </Container>
+      {/* <Container> */}
+      <Header />
+      <Home />
+      {/* </Container> */}
     </Box>
   );
 }
