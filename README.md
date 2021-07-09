@@ -10,4 +10,4 @@
 - [Tesla](https://www.tesla.com)
 
 #### Link to clone
-- [Netlify](https://cranky-poitras-19c4e9.netlify.app/)
+- [Netlify](https://oris-tesla-clone.netlify.app)
