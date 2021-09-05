@@ -1,7 +1,6 @@
 {
   "name": "tesla-clone",
   "version": "0.1.0",
-  "homepage":"https://prince-appiah.github.io/tesla-clone",
   "private": false,
   "dependencies": {
     "@material-ui/core": "^4.11.4",
