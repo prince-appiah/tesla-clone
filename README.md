@@ -1,4 +1,4 @@
-## Tesla Website Rebulid with React JS and Material UI
+## Tesla Website Clone built with React JS and Material UI
 
   
   
